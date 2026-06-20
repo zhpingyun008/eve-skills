@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eve Skills — AI Agent技能市场</title>
+<meta name="description" content="全球最大中文AI Agent技能市场，219个即用技能，46个类别。支持Hermes Agent、Claude Code、OpenAI Agents。">
+<meta property="og:title" content="Eve Skills — AI Agent技能市场">
+<meta property="og:description" content="全球最大中文AI Agent技能市场，219个即用技能">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; }
+.container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+.hero { text-align: center; padding: 60px 0; }
+.hero h1 { font-size: 2.5em; color: #58a6ff; margin-bottom: 16px; }
+.hero p { font-size: 1.1em; color: #8b949e; max-width: 600px; margin: 0 auto 30px; }
+.stats { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 30px 0; }
+.stat-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px 30px; text-align: center; min-width: 120px; }
+.stat-card .num { font-size: 2em; font-weight: bold; color: #58a6ff; }
+.stat-card .label { font-size: 0.9em; color: #8b949e; margin-top: 4px; }
+.cta-buttons { display: flex; gap: 12px; justify-content: center; margin: 30px 0; flex-wrap: wrap; }
+.btn { padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1em; }
+.btn-primary { background: #238636; color: white; }
+.btn-secondary { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; }
+.btn:hover { opacity: 0.85; }
+.categories { margin: 40px 0; }
+.categories h2 { color: #58a6ff; margin-bottom: 16px; }
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+.cat-item { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 12px 16px; display: flex; justify-content: space-between; }
+.cat-item .count { color: #58a6ff; font-weight: bold; }
+.features { margin: 40px 0; }
+.features h2 { color: #58a6ff; margin-bottom: 16px; }
+.feature-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+.feature-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
+.feature-card h3 { color: #c9d1d9; margin-bottom: 8px; }
+.feature-card p { color: #8b949e; font-size: 0.9em; }
+.api-demo { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin: 20px 0; }
+.api-demo pre { background: #0d1117; padding: 16px; border-radius: 6px; overflow-x: auto; font-size: 0.9em; margin-top: 12px; }
+footer { text-align: center; padding: 40px; color: #8b949e; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <h1>🤖 Eve Skills</h1>
+    <p>全球最大中文AI Agent技能市场 — 219个即用技能，覆盖46个类别。像App Store一样浏览、搜索、下载AI Agent技能。</p>
+    <div class="cta-buttons">
+      <a href="https://prerequisite-writers-end-dress.trycloudflare.com" class="btn btn-primary">🌐 在线浏览</a>
+      <a href="https://github.com/zhpingyun008/eve-skills" class="btn btn-secondary">📦 GitHub</a>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><div class="num">219</div><div class="label">技能总数</div></div>
+    <div class="stat-card"><div class="num">46</div><div class="label">类别数</div></div>
+    <div class="stat-card"><div class="num">Free</div><div class="label">入门价格</div></div>
+    <div class="stat-card"><div class="num">2762</div><div class="label">脚本文件</div></div>
+  </div>
+
+  <div class="categories">
+    <h2>📂 技能类别 Top 10</h2>
+    <div class="cat-grid">
+      <div class="cat-item"><span>cmmi5</span><span class="count">48</span></div>
+      <div class="cat-item"><span>devops</span><span class="count">32</span></div>
+      <div class="cat-item"><span>agent-skills</span><span class="count">24</span></div>
+      <div class="cat-item"><span>engineering</span><span class="count">21</span></div>
+      <div class="cat-item"><span>business</span><span class="count">12</span></div>
+      <div class="cat-item"><span>sdlc</span><span class="count">11</span></div>
+      <div class="cat-item"><span>meta</span><span class="count">9</span></div>
+      <div class="cat-item"><span>security</span><span class="count">8</span></div>
+      <div class="cat-item"><span>productivity</span><span class="count">5</span></div>
+      <div class="cat-item"><span>collaboration</span><span class="count">3</span></div>
+    </div>
+  </div>
+
+  <div class="features">
+    <h2>✨ 为什么选择Eve Skills？</h2>
+    <div class="feature-list">
+      <div class="feature-card">
+        <h3>🇨🇳 中文优先</h3>
+        <p>全球唯一中文AI Agent技能市场。技能描述、文档、触发词全部中文。</p>
+      </div>
+      <div class="feature-card">
+        <h3>🔍 即搜即用</h3>
+        <p>按类别浏览、关键词搜索，找到技能直接下载。支持SKILL.md格式，多框架兼容。</p>
+      </div>
+      <div class="feature-card">
+        <h3>✅ 质量门禁</h3>
+        <p>每个技能经过CMMI5质量体系审核。有分类、版本、标签、触发词完整元数据。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="api-demo">
+    <h3>🛠 快速上手</h3>
+    <pre># 浏览所有技能
+curl https://prerequisite-writers-end-dress.trycloudflare.com/api/skills
+
+# 按类别筛选
+curl https://prerequisite-writers-end-dress.trycloudflare.com/api/skills?category=devops
+
+# 搜索Docker相关技能
+curl "https://prerequisite-writers-end-dress.trycloudflare.com/api/skills?search=docker"
+
+# 查看所有类别
+curl https://prerequisite-writers-end-dress.trycloudflare.com/api/skills/categories</pre>
+  </div>
+
+  <footer>
+    <p>Eve Skills by <a href="https://github.com/zhpingyun008">zhpingyun008</a> | <a href="https://github.com/zhpingyun008/eve-skills">GitHub</a></p>
+  </footer>
+</div>
+</body>
+</html>
