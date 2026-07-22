@@ -35,6 +35,13 @@ app.include_router(payment.router)
 app.include_router(admin.router)
 
 
+@app.get("/")
+def landing_page():
+    from fastapi.responses import HTMLResponse
+    index_path = os.path.join(os.path.dirname(__file__), "static", "index.html")
+    with open(index_path, "r", encoding="utf-8") as f:
+        return HTMLResponse(content=f.read(), status_code=200)
+
 @app.on_event("startup")
 def on_startup():
     """Initialize database on startup."""
@@ -61,21 +68,6 @@ def on_startup():
         pass
     finally:
         db.close()
-
-
-@app.get("/")
-def root():
-    return {
-        "message": "AI Agent Skills Marketplace API",
-        "version": "1.0.0",
-        "docs": "/docs",
-        "endpoints": {
-            "auth": "/api/auth",
-            "skills": "/api/skills",
-            "payment": "/api/payment",
-            "admin": "/api/admin",
-        },
-    }
 
 
 @app.get("/health")

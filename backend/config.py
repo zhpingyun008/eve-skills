@@ -1,11 +1,10 @@
 """Application configuration."""
 import os
-import secrets
 
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./skills_market.db")
 
-# Generate a random secret key if not set in environment
-SECRET_KEY = os.getenv("SECRET_KEY", secrets.token_urlsafe(32))
+# Use environment variable, or fall back to a fixed dev key (tokens survive restarts)
+SECRET_KEY = os.getenv("SECRET_KEY", "skills-market-dev-secret-key-change-in-production")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "1440"))  # 24 hours
 
