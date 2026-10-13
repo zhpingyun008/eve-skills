@@ -3,112 +3,152 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eve Skills — AI Agent技能市场</title>
-<meta name="description" content="全球最大中文AI Agent技能市场，219个即用技能，46个类别。支持Hermes Agent、Claude Code、OpenAI Agents。">
-<meta property="og:title" content="Eve Skills — AI Agent技能市场">
-<meta property="og:description" content="全球最大中文AI Agent技能市场，219个即用技能">
+<title>Eve Skills — 301 AI Agent Skills Marketplace</title>
+<meta name="description" content="301 production-grade AI Agent skills. CMMI5, full-stack, security, DevOps, testing, business automation. Works with Hermes, Claude Code, Codex.">
+<meta property="og:title" content="Eve Skills — 301 AI Agent Skills">
+<meta property="og:description" content="301 production-grade AI Agent skills, one bundle, any agent.">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; }
-.container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-.hero { text-align: center; padding: 60px 0; }
-.hero h1 { font-size: 2.5em; color: #58a6ff; margin-bottom: 16px; }
-.hero p { font-size: 1.1em; color: #8b949e; max-width: 600px; margin: 0 auto 30px; }
-.stats { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 30px 0; }
-.stat-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px 30px; text-align: center; min-width: 120px; }
-.stat-card .num { font-size: 2em; font-weight: bold; color: #58a6ff; }
-.stat-card .label { font-size: 0.9em; color: #8b949e; margin-top: 4px; }
-.cta-buttons { display: flex; gap: 12px; justify-content: center; margin: 30px 0; flex-wrap: wrap; }
-.btn { padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1em; }
-.btn-primary { background: #238636; color: white; }
-.btn-secondary { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; }
-.btn:hover { opacity: 0.85; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0b1120; color: #e2e8f0; line-height: 1.6; }
+.container { max-width: 960px; margin: 0 auto; padding: 20px; }
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero h1 { font-size: 2.8em; background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
+.hero p { font-size: 1.2em; color: #94a3b8; max-width: 700px; margin: 0 auto; }
+.badge { display: inline-block; background: #1e293b; border: 1px solid #334155; border-radius: 20px; padding: 6px 16px; font-size: 0.85em; color: #94a3b8; margin: 0 4px; }
+.badge.blue { border-color: #3b82f6; color: #60a5fa; }
+.price-card { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; border-radius: 16px; padding: 40px; text-align: center; margin: 40px 0; max-width: 500px; margin-left: auto; margin-right: auto; }
+.price-card .price { font-size: 3em; font-weight: bold; color: #60a5fa; }
+.price-card .price small { font-size: 0.4em; color: #64748b; }
+.price-card .btn { display: inline-block; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; text-decoration: none; padding: 16px 48px; border-radius: 12px; font-size: 1.2em; font-weight: bold; margin-top: 20px; transition: transform 0.2s; }
+.price-card .btn:hover { transform: translateY(-2px); }
+.price-card .sub { color: #64748b; font-size: 0.85em; margin-top: 8px; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 40px 0; }
+.stat { background: #1e293b; padding: 20px; border-radius: 12px; text-align: center; border: 1px solid #1e293b; }
+.stat .num { font-size: 1.8em; font-weight: bold; color: #60a5fa; }
+.stat .label { color: #64748b; font-size: 0.85em; margin-top: 4px; }
 .categories { margin: 40px 0; }
-.categories h2 { color: #58a6ff; margin-bottom: 16px; }
-.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
-.cat-item { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 12px 16px; display: flex; justify-content: space-between; }
-.cat-item .count { color: #58a6ff; font-weight: bold; }
-.features { margin: 40px 0; }
-.features h2 { color: #58a6ff; margin-bottom: 16px; }
-.feature-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
-.feature-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
-.feature-card h3 { color: #c9d1d9; margin-bottom: 8px; }
-.feature-card p { color: #8b949e; font-size: 0.9em; }
-.api-demo { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin: 20px 0; }
-.api-demo pre { background: #0d1117; padding: 16px; border-radius: 6px; overflow-x: auto; font-size: 0.9em; margin-top: 12px; }
-footer { text-align: center; padding: 40px; color: #8b949e; font-size: 0.9em; }
+.categories h2 { margin-bottom: 20px; color: #94a3b8; }
+.cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cat-item { background: #1e293b; padding: 16px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #1e293b; }
+.cat-item .name { color: #e2e8f0; }
+.cat-item .count { color: #60a5fa; font-weight: bold; }
+.cta-section { text-align: center; padding: 60px 0; }
+.cta-section h2 { color: #60a5fa; margin-bottom: 12px; }
+.cta-section p { color: #94a3b8; margin-bottom: 24px; }
+.platforms { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 20px 0; }
+.platform { background: #1e293b; padding: 10px 20px; border-radius: 8px; border: 1px solid #334155; font-size: 0.9em; color: #94a3b8; }
+.faq { margin: 40px 0; }
+.faq details { background: #1e293b; padding: 16px 20px; border-radius: 10px; margin-bottom: 8px; border: 1px solid #1e293b; cursor: pointer; }
+.faq details summary { color: #e2e8f0; font-weight: 600; cursor: pointer; }
+.faq details p { color: #94a3b8; margin-top: 8px; font-size: 0.95em; }
+.footer { text-align: center; color: #475569; padding: 40px 0; font-size: 0.85em; border-top: 1px solid #1e293b; margin-top: 40px; }
+.footer a { color: #60a5fa; text-decoration: none; }
+.alipay-btn { display: inline-block; background: #1e293b; border: 1px solid #334155; color: #e2e8f0; text-decoration: none; padding: 12px 32px; border-radius: 8px; font-size: 1em; margin: 8px; transition: border-color 0.2s; }
+.alipay-btn:hover { border-color: #60a5fa; }
+.dl-btn { display: inline-block; background: #161b22; border: 1px dashed #3b82f6; color: #60a5fa; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-size: 0.95em; margin: 8px; }
+@media (max-width: 640px) { .stats { grid-template-columns: 1fr 1fr; } .cat-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 <div class="container">
-  <div class="hero">
-    <h1>🤖 Eve Skills</h1>
-    <p>全球最大中文AI Agent技能市场 — 219个即用技能，覆盖46个类别。像App Store一样浏览、搜索、下载AI Agent技能。</p>
-    <div class="cta-buttons">
-      <a href="https://prerequisite-writers-end-dress.trycloudflare.com" class="btn btn-primary">🌐 在线浏览</a>
-      <a href="https://github.com/zhpingyun008/eve-skills" class="btn btn-secondary">📦 GitHub</a>
-    </div>
+
+<div class="hero">
+  <h1>Eve Skills ✦</h1>
+  <p>301 production-grade AI Agent skills. One bundle. Any agent.</p>
+  <div style="margin-top: 20px;">
+    <span class="badge blue">Hermes</span>
+    <span class="badge">Claude Code</span>
+    <span class="badge">Codex</span>
+    <span class="badge">OpenCode</span>
   </div>
+</div>
 
-  <div class="stats">
-    <div class="stat-card"><div class="num">219</div><div class="label">技能总数</div></div>
-    <div class="stat-card"><div class="num">46</div><div class="label">类别数</div></div>
-    <div class="stat-card"><div class="num">Free</div><div class="label">入门价格</div></div>
-    <div class="stat-card"><div class="num">2762</div><div class="label">脚本文件</div></div>
+<div class="stats">
+  <div class="stat"><div class="num">301</div><div class="label">AI Skills</div></div>
+  <div class="stat"><div class="num">35</div><div class="label">Categories</div></div>
+  <div class="stat"><div class="num">2,762</div><div class="label">Scripts</div></div>
+  <div class="stat"><div class="num">6.9MB</div><div class="label">Lightweight</div></div>
+</div>
+
+<div class="price-card">
+  <div class="price">$29 <small>USD</small></div>
+  <p style="color:#94a3b8;margin:12px 0;">One-time purchase · Lifetime access · MIT License</p>
+  <a class="btn" href="https://zhpingyun.gumroad.com/l/rruqay" target="_blank" rel="noopener">Buy on Gumroad</a>
+  <div class="sub">✨ 301 skills, 35 categories, full CMMI5 + DevOps + Security + Business toolkit</div>
+</div>
+
+<div style="text-align:center;margin:20px 0;">
+  <p style="color:#64748b;margin-bottom:8px;">国内用户支持支付宝</p>
+  <a class="alipay-btn" href="https://afdian.com/a/eve-ai" target="_blank" rel="noopener">💳 爱发电购买 ¥99</a>
+  <a class="dl-btn" href="https://github.com/zhpingyun008/eve-skills/releases/download/v1.0/eve-skills-bundle-v1.0.tar.gz">⬇ 已购买？下载技能包 (v1.0)</a>
+</div>
+
+<div class="categories">
+  <h2>📦 Skills by Category</h2>
+  <div class="cat-grid">
+    <div class="cat-item"><span class="name">🏛️ CMMI5 Compliance</span><span class="count">35</span></div>
+    <div class="cat-item"><span class="name">🤖 Agent Skills</span><span class="count">28</span></div>
+    <div class="cat-item"><span class="name">🛠️ DevOps &amp; Infrastructure</span><span class="count">25</span></div>
+    <div class="cat-item"><span class="name">🔒 Security</span><span class="count">12</span></div>
+    <div class="cat-item"><span class="name">🧪 Code Quality &amp; Testing</span><span class="count">30</span></div>
+    <div class="cat-item"><span class="name">📋 SDLC</span><span class="count">25</span></div>
+    <div class="cat-item"><span class="name">⚡ Engineering</span><span class="count">22</span></div>
+    <div class="cat-item"><span class="name">💰 Business &amp; Monetization</span><span class="count">15</span></div>
+    <div class="cat-item"><span class="name">📊 Data &amp; ML</span><span class="count">10</span></div>
+    <div class="cat-item"><span class="name">⚙️ Productivity</span><span class="count">20</span></div>
+    <div class="cat-item"><span class="name">🧠 Meta &amp; Evolution</span><span class="count">15</span></div>
+    <div class="cat-item"><span class="name">🤗 LLM &amp; Model</span><span class="count">12</span></div>
   </div>
+</div>
 
-  <div class="categories">
-    <h2>📂 技能类别 Top 10</h2>
-    <div class="cat-grid">
-      <div class="cat-item"><span>cmmi5</span><span class="count">48</span></div>
-      <div class="cat-item"><span>devops</span><span class="count">32</span></div>
-      <div class="cat-item"><span>agent-skills</span><span class="count">24</span></div>
-      <div class="cat-item"><span>engineering</span><span class="count">21</span></div>
-      <div class="cat-item"><span>business</span><span class="count">12</span></div>
-      <div class="cat-item"><span>sdlc</span><span class="count">11</span></div>
-      <div class="cat-item"><span>meta</span><span class="count">9</span></div>
-      <div class="cat-item"><span>security</span><span class="count">8</span></div>
-      <div class="cat-item"><span>productivity</span><span class="count">5</span></div>
-      <div class="cat-item"><span>collaboration</span><span class="count">3</span></div>
-    </div>
-  </div>
+<div class="platforms">
+  <span class="platform">✓ Hermes Agent (native)</span>
+  <span class="platform">✓ Claude Code</span>
+  <span class="platform">✓ Codex</span>
+  <span class="platform">✓ OpenCode</span>
+  <span class="platform">✓ Any AI coding agent</span>
+</div>
 
-  <div class="features">
-    <h2>✨ 为什么选择Eve Skills？</h2>
-    <div class="feature-list">
-      <div class="feature-card">
-        <h3>🇨🇳 中文优先</h3>
-        <p>全球唯一中文AI Agent技能市场。技能描述、文档、触发词全部中文。</p>
-      </div>
-      <div class="feature-card">
-        <h3>🔍 即搜即用</h3>
-        <p>按类别浏览、关键词搜索，找到技能直接下载。支持SKILL.md格式，多框架兼容。</p>
-      </div>
-      <div class="feature-card">
-        <h3>✅ 质量门禁</h3>
-        <p>每个技能经过CMMI5质量体系审核。有分类、版本、标签、触发词完整元数据。</p>
-      </div>
-    </div>
-  </div>
+<div class="cta-section">
+  <h2>Ready to 10x your AI agent workflow?</h2>
+  <p>301 skills that turn any AI coding agent into a full-stack engineering team.</p>
+  <a class="btn" href="https://zhpingyun.gumroad.com/l/rruqay" target="_blank" rel="noopener">Get Eve Skills Bundle →</a>
+</div>
 
-  <div class="api-demo">
-    <h3>🛠 快速上手</h3>
-    <pre># 浏览所有技能
-curl https://prerequisite-writers-end-dress.trycloudflare.com/api/skills
+<div class="faq">
+  <h2 style="margin-bottom:20px;color:#94a3b8;">FAQ</h2>
+  <details>
+    <summary>What's included in the bundle?</summary>
+    <p>301 SKILL.md files organized in 35 categories. Each skill has YAML frontmatter, triggers, step-by-step instructions, verification steps, and pitfalls. The bundle is 6.9MB, MIT licensed.</p>
+  </details>
+  <details>
+    <summary>Which AI agents are compatible?</summary>
+    <p>All skills work with Hermes Agent (native support), Claude Code, Codex, OpenCode, and any AI coding agent that follows structured markdown instructions.</p>
+  </details>
+  <details>
+    <summary>How are skills updated?</summary>
+    <p>One-time purchase includes lifetime access to v1.x. Updated bundles are published to the same download link and the Gumroad product page.</p>
+  </details>
+  <details>
+    <summary>Can I use these commercially?</summary>
+    <p>Yes! MIT license — use in personal and commercial projects freely. No attribution required.</p>
+  </details>
+  <details>
+    <summary>Is there a refund policy?</summary>
+    <p>30-day money-back guarantee. If the skills don't work for you, email us for a full refund.</p>
+  </details>
+</div>
 
-# 按类别筛选
-curl https://prerequisite-writers-end-dress.trycloudflare.com/api/skills?category=devops
+<div class="footer">
+  <p>© 2026 Eve (伊芙科技) · AI-Native Software Factory · 17 AI Employees + 1 Human CEO</p>
+  <p style="margin-top:8px;">
+    <a href="https://github.com/zhpingyun008/eve-skills">GitHub</a> ·
+    <a href="https://zhpingyun.gumroad.com/l/rruqay">Gumroad $29</a> ·
+    <a href="https://afdian.com/a/eve-ai">爱发电 ¥99</a> ·
+    <a href="mailto:zhpingyun008@qq.com">zhpingyun008@qq.com</a>
+  </p>
+</div>
 
-# 搜索Docker相关技能
-curl "https://prerequisite-writers-end-dress.trycloudflare.com/api/skills?search=docker"
-
-# 查看所有类别
-curl https://prerequisite-writers-end-dress.trycloudflare.com/api/skills/categories</pre>
-  </div>
-
-  <footer>
-    <p>Eve Skills by <a href="https://github.com/zhpingyun008">zhpingyun008</a> | <a href="https://github.com/zhpingyun008/eve-skills">GitHub</a></p>
-  </footer>
 </div>
 </body>
 </html>
